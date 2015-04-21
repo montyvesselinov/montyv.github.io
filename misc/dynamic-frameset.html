@@ -1,0 +1,55 @@
+
+<!-- FOUR STEPS TO INSTALL DYNAMIC FRAMESET:
+
+  1.  Create a new HTML page, name it dynamic-frameset.html
+  2.  Insert this first script into the HEAD of the frameset page
+  3.  Add the last code into the BODY of your HTML document
+  4.  Then link to your dynamic-frameset.html page as demonstrated  -->
+
+<!-- STEP ONE:  Create a new HTML page, save as dynamic-frameset.html  -->
+
+<!-- STEP TWO: Paste this code into the HEAD of your HTML document  -->
+
+<HEAD>
+
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var table_of_contents = "http://google.com/";  // change to your default frame page
+
+var blank = " "; // blank page
+var content = (location.search) ? location.search.substring(1, location.search.length) : table_of_contents;
+
+// if query string ('?' after URL) set content variable to what follows the '?'
+// otherwise, start fresh by setting content variable to table_of_contents page
+
+function fillFrame() {
+parent.header.location.href = content;
+parent.main.location.href = content;
+}
+//  End -->
+</script>
+</HEAD>
+
+<!-- STEP THREE: Copy this code into the BODY of your HTML document  -->
+
+<frameset rows="100,*" onLoad="fillFrame();">
+  <frame src="UntitledFrame-1" name="header" scrolling="no" noresize>
+  <frame name="main" src="javascript:parent.blank" scrolling="auto" noresize>
+</frameset><noframes></noframes>
+
+<BODY>
+
+<!-- STEP FOUR: Then use this format for each contact page link you use  -->
+
+<a href="dynamic-frameset.html?http://buttons.javascriptsource.com" target="_new">Load Buttons in My Frames</a>
+<br>
+<a href="dynamic-frameset.html?http://clocks.javascriptsource.com" target="_new">Load Clocks in My Frames</a>
+<br>
+<a href="dynamic-frameset.html" target="_new">Load Default Page in My Frames</a>
+
+
+<!-- Script Size:  1.20 KB -->
