@@ -1,75 +1,75 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<META NAME="Description" CONTENT="Velimir Vesselinov monty wells pumping test drawdown analytical theis hantush jacob transient superposition hydrology hydrogeology groundwater aquifer vadose zone" />
-<META NAME="Keywords" CONTENT="Velimir Vesselinov monty wells pumping test drawdown analytical theis hantush jacob transient superposition hydrology hydrogeology groundwater aquifer vadose zone" />
-<title>Velimir Vesselinov monty wells</title>
-<style type="text/css">
-<!--
-.verdana {
-	font-family: Verdana, Geneva, sans-serif;
-	font-weight: bold;
-}
-a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-a:active {
-	text-decoration: none;
-}
-
--->
-</style>
-<SCRIPT TYPE="text/javascript">
-<!-- hide
-if (parent.location.href == self.location.href) {
-    if( window.location.href.replace )
-        window.location.replace('index.html?wells');
-    else
-		window.location.href = 'index.html?wells'; // causes problems with back button, but works
-}
-// end hide -->
-</SCRIPT>
-</head>
-
-<body bgcolor="#F9F9F9" link="#FF8040" vlink="#FF8040" alink="#FF8040" class="verdana">
-<h2>WELLS</h2>
-<p>v 1.1 released July 2011; Vesselinov, Harp &amp; Mishra</p>
-
-<p><a href="http://wells.lanl.gov" target="_blank">Check out the new WELLS website.</a></p>
-
-<p>WELLS is a C code simulating drawdowns caused by multiple pumping wells using analytical solutions. The code can represent pumping in confined, unconfined, and leaky aquifers. The code applies the principle of superposition to account for transients in the pumping regime and multiple sources (pumping wells). An exponential or linear temporal trend of water-level change can be included to account for non-pumping influences (e.g. recharge trend). Early time Theis parameter behavior can be accounted for using <a href="papers/theis-exp_v03.pdf">exponential functions</a> (transmissivities and storativities; <a href="papers/theis-exp_v03.pdf">Harp and Vesselinov, 2010b</a>).</p>
-<p>Availabe analytical solutions:</p>
-<ul>
-  <li>confined aquifer (Theis, Mishra et al)</li>
-  <li>unconfined aquifer (transformed Theis, Mishra &amp; Neuman)</li>
-  <li>leaky confined aquifer (Hantish, Mishra et al)</li>
-  <li>leaky unconfined aquifer (Mishra et al)</li>
-  <li>fully and partially penetrating pumping well(s)</li>
-  <li>fully and partially penetrating observation well(s)</li>
-  <li>transient pumping rates: step changes and linear changes (Mishra et al)</li>
-</ul>
-<p> The code has been applied to decompose transient water-supply pumping influences in observed water levels at the LANL site (<a href="papers/theis-fin_v02.pdf">Harp and Vesselinov, 2010a</a>). For example, the figure below shows simulated drawdowns caused by pumping of PM-2, PM-3, PM-4 and PM-5 on water levels observed at R-15.</p>
-<p><a href="codes/wells/r15-v04-dcmp-clr.pdf"><img src="codes/wells/r15-v04-dcmp-clr.png" width="660" height="690" align="middle" /></a></p>
-<dl>
-  <dt>Codes with similar capabilities are<a href="http://www.swstechnology.com/groundwater-software/pumping-test-analysis/aquifertest-pro" target="_top"> AquiferTest Pro</a>, <a href="http://www.rockware.com/product/overview.php?id=71" target="_top">AquiferWin32</a>, <a href="http://www.aqtesolv.com/" target="_top">Aqtesolv</a>, <a href="http://www.microfem.nl/products/mlu.html" target="_top">MLU</a>, and <a href="http://pubs.usgs.gov/wri/wri99-4225/" target="_top">WTAQ</a>.</dt>
-</dl>
-<h3 class="lucida"><a href="inquiries.html">Send me questions/inquiries</a></h3>
-
-<ol>
-  <li>Submit a request using the <a href="inquiries.html">contact us</a> page; please include a brief description of the  projects for which you will be using MADS.<br />
-  </li>
-  <li>Fill-in, print and sign the <a href="codes/Software_Questionnaire_V6_ctr.doc">LANL Software Request Questionnaire.</a></li>
-  <li>Scan and send the signed document by e-mail to <a href="mailto:software@lanl.gov">software@lanl.gov</a> or <a href="mailto:ctramos@lanl.gov">ctramos@lanl.gov</a> to request the LANL release of the code.</li>
-  <li>After the code release is approved (typically within 24 hours), we will send you <strong>MADS</strong> by email.</li>
-</ol>
-<p>LA-CC-10-019, LA-CC-11-098<br />
-</p>
-</body>
+	<head>
+		<title>Velimir Vesselinov monty wells</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="Description" content="Velimir Vesselinov monty wells pumping test drawdown analytical theis hantush jacob transient superposition hydrology hydrogeology groundwater aquifer vadose zone" />
+		<meta name="Keywords" content="Velimir Vesselinov monty wells pumping test drawdown analytical theis hantush jacob transient superposition hydrology hydrogeology groundwater aquifer vadose zone" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<script src="js/main.js" type="text/javascript"></script>
+	</head>
+	<body class="main">
+		<h1>WELLS</h1>
+		<p>
+			v 1.1 released July 2011; Vesselinov, Harp &amp; Mishra
+		</p>
+		<p>
+			<a href="http://wells.lanl.gov" target="_blank">Go to WELLS website.</a>
+		</p>
+		<p>
+			WELLS is a C code simulating drawdowns caused by multiple pumping wells using analytical solutions.
+			The code can represent pumping in confined, unconfined, and leaky aquifers.
+			The code applies the principle of superposition to account for transients in the pumping regime and multiple sources (pumping wells).
+			An exponential or linear temporal trend of water-level change can be included to account for non-pumping influences (e.g. recharge trend).
+			Early time Theis parameter behavior can be accounted for using <a href="papers/theis-exp_v03.pdf">exponential functions</a> (transmissivities and storativities; <a href="papers/theis-exp_v03.pdf">Harp and Vesselinov, 2010b</a>).
+		</p>
+		<p>
+			Availabe analytical solutions:
+		</p>
+		<ul>
+			<li>
+				confined aquifer (Theis, Mishra et al)
+			</li>
+			<li>
+				unconfined aquifer (transformed Theis, Mishra &amp; Neuman)
+			</li>
+			<li>
+				leaky confined aquifer (Hantish, Mishra et al)
+			</li>
+			<li>
+				leaky unconfined aquifer (Mishra et al)
+			</li>
+			<li>
+				fully and partially penetrating pumping well(s)
+			</li>
+			<li>
+				fully and partially penetrating observation well(s)
+			</li>
+			<li>
+				transient pumping rates: step changes and linear changes (Mishra et al)
+			</li>
+		</ul>
+		<p>
+			The code has been applied to decompose transient water-supply pumping influences in observed water levels at the LANL site (<a href="papers/theis-fin_v02.pdf">Harp and Vesselinov, 2010a</a>).
+			For example, the figure below shows simulated drawdowns caused by pumping of PM-2, PM-3, PM-4 and PM-5 on water levels observed at R-15.
+		</p>
+		<p>
+			<a href="codes/wells/r15-v04-dcmp-clr.pdf"><img src="codes/wells/r15-v04-dcmp-clr.png" width="80%" align="middle" /></a>
+		</p>
+		<dl>
+			<dt>
+				Codes with similar capabilities are<a href="http://www.swstechnology.com/groundwater-software/pumping-test-analysis/aquifertest-pro" target="_top"> AquiferTest Pro</a>, <a href="http://www.rockware.com/product/overview.php?id=71" target="_top">AquiferWin32</a>, <a href="http://www.aqtesolv.com/" target="_top">Aqtesolv</a>, <a href="http://www.microfem.nl/products/mlu.html" target="_top">MLU</a>, and <a href="http://pubs.usgs.gov/wri/wri99-4225/" target="_top">WTAQ</a>.
+			</dt>
+		</dl>
+		<p>
+			<a href="inquiries.html">Send me questions/inquiries</a>
+		</p>
+		<p>
+			Executables, source code, example files, and a brief manual are available at <a href="http://wells.lanl.gov" target="_blank">WELLS website</a>.
+		</p>
+		<p>
+			LA-CC-10-019, LA-CC-11-098
+			<br />
+		</p>
+	</body>
 </html>
