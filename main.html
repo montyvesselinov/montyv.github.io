@@ -7,17 +7,17 @@
 
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 		<script src="js/main.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var name = getParam();
+			if (name == "undefined")
+				loadFrames('contact.html', 'sidebar.html');
+			else if (name == "wells" || name == "mads")
+				loadFrames(name + '.html', 'sidebar-codes.html');
+			else if (name == "ascem" || name == "lanlep")
+				loadFrames(name + '.html', 'sidebar-projects.html');
+			else
+				loadFrames(name + '.html', 'sidebar.html');
+		</script>
 	</head>
 	<body></body>
-	<script type="text/javascript">
-		var name = getParam();
-		if (name == "undefined")
-			loadFrames('contact.html', 'sidebar.html');
-		else if (name == "wells" || name == "mads")
-			loadFrames(name + '.html', 'sidebar-codes.html');
-		else if (name == "ascem" || name == "lanlep")
-			loadFrames(name + '.html', 'sidebar-projects.html');
-		else
-			loadFrames(name + '.html', 'sidebar.html');
-	</script>
 </html>
