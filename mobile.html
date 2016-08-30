@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="author" content="velimir.vesselinov@gmail.com" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+		<title> monty Velimir V. Vesselinov</title>
+		<link type="text/css" rel="stylesheet" href="css/demo.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('nav#menu').mmenu({
+					extensions : ['effect-slide', 'pageshadow', 'theme-dark'],
+					header : true,
+					searchfield : true,
+					slidingSubmenus : false,
+					counters : true,
+					footer : {
+						add : false,
+						content : '<a href="mads.lanl.gov">MADS</a>'
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="page">
+			<div class="header">
+				<a href="#menu"></a>
+				Velimir Vesselinov (monty)
+			</div>
+			<div id="content" class="content"></div>
+			<nav id="menu">
+				<ul>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+					<li>
+						<a href="#info">Info</a>
+					<li>
+						<a href="#education">Education</a>
+					<li>
+						<a href="#research">Research</a>
+					<li>
+						<a href="#publications">Publications</a>
+					<li>
+						<a href="#presentations">Presentations</a>
+					<li>
+						<a href="#reports">Reports</a>
+					<li>
+						<a href="#projects">Projects</a>
+						<ul>
+							<li>
+								<a href="#diamond">DiaMonD</a>
+							</li>
+							<li>
+								<a href="#ep">LANL EP</a>
+							<li>
+								<a href="#ascem">ASCEM</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#codes">Codes</a>
+						<ul>
+							<li>
+								<a href="#mads">MADS</a>
+							</li>
+							<li>
+								<a href="#wells">WELLS</a>
+							</li>
+							<li>
+								<a href="#mpest">MPEST</a>
+							</li>
+							<li>
+								<a href="#mpest">MPRUN</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#images">Images</a>
+					</li>
+					<li>
+						<a href="#links">Links</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</body>
+	<script>
+		$(document).ready(function() {
+			console.log("ready!");
+			$("#menu a").on('click', function(){
+				console.log("click!");
+				var trigger_href = $(this).attr('href');
+				console.log(trigger_href);
+				$("#content").load("contact2.html");
+				window.location.hash = trigger_href;
+			});
+		});
+	</script>
+</html>
