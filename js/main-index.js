@@ -3,9 +3,9 @@ function consolelog(str) {
 		console.log(str);
 }
 
-function loadmainFrame(page) {
-	document.getElementById("mainFrame").innerHTML='<object type="text/html" data="' + page + '" ></object>'
-
+function loadFrames(page1, page2) {
+	eval("parent.mainFrame.location='" + page1 + "'");
+	eval("parent.leftFrame.location='" + page2 + "'");
 }
 
 var blank = "main.html";
